@@ -1,0 +1,14 @@
+# Heat map
+n_train = data.select_dtypes(include=['float64', 'int64'])
+plt.figure(figsize=(14, 14))
+sns.heatmap(n_train.corr(), annot=True, annot_kws={size 6}, cmap='coolwarm', linewidths=.5, square=True)
+
+correlation_matrix = n_train.corr()
+cols = correlation_matrix.nlargest(16, 'DEATH_EVENT')['DEATH_EVENT'].index
+cm = np.corrcoef(data[cols].values.T)
+sns.set(font_scale=1.25)
+plt.figure(figsize=(12, 12))
+heatmap = sns.heatmap(cm, cbar=True, annot=True, square=True, fmt='.2f', annot_kws={'size' 10},
+                      yticklabels=cols.values, xticklabels=cols.values)
+plt.title('Top 16 Correlation Matrix')  # 选出15组与DEATH_EVENT相关性高的数据
+plt.show()

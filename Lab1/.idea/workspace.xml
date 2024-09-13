@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b08c6db3-f0fd-4b22-8181-031e94566ff0" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="2VG9A9M7Vv3SQrFa0Mb3rbGhhdG" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Report/resource" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\zhangyifei\study\Lund\2023-2024_first_semester\Modeling_and_Learning_from_data\Lab1\Report\resource" />
+      <recent name="C:\zhangyifei\study\Lund\2023-2024_first_semester\Modeling_and_Learning_from_data\Lab1" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.fc">
+    <configuration name="SVD+KNN" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Lab1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SVD+KNN.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="SVD+Logistic" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Lab1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SVD+Logistic.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="SVD+RF" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Lab1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SVD+RF.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Voting" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Lab1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Voting.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="fc" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Lab1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/fc.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.fc" />
+        <item itemvalue="Python.SVD+RF" />
+        <item itemvalue="Python.SVD+KNN" />
+        <item itemvalue="Python.SVD+Logistic" />
+        <item itemvalue="Python.Voting" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b08c6db3-f0fd-4b22-8181-031e94566ff0" name="Default Changelist" comment="" />
+      <created>1694451404043</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1694451404043</updated>
+      <workItem from="1694451406335" duration="7439000" />
+      <workItem from="1694521482216" duration="2041000" />
+      <workItem from="1695416493105" duration="1300000" />
+      <workItem from="1695504613391" duration="1517000" />
+      <workItem from="1695673346892" duration="2821000" />
+      <workItem from="1695763670140" duration="3768000" />
+      <workItem from="1695845278513" duration="5045000" />
+      <workItem from="1695857410807" duration="1679000" />
+      <workItem from="1695859145876" duration="3410000" />
+      <workItem from="1695863905716" duration="2294000" />
+      <workItem from="1695892685573" duration="21029000" />
+      <workItem from="1696101943012" duration="3264000" />
+      <workItem from="1696122855240" duration="1022000" />
+      <workItem from="1696124157342" duration="544000" />
+      <workItem from="1696259547885" duration="2836000" />
+      <workItem from="1696423047640" duration="35000" />
+      <workItem from="1697401430642" duration="2012000" />
+      <workItem from="1697413583198" duration="617000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="804" y="294" key="FileChooserDialogImpl" timestamp="1696123290464">
+      <screen x="0" y="0" width="2048" height="1104" />
+    </state>
+    <state x="804" y="294" key="FileChooserDialogImpl/0.0.2048.1104/-1600.-524.1280.2000@0.0.2048.1104" timestamp="1696123290464" />
+    <state width="2005" height="283" key="GridCell.Tab.0.bottom" timestamp="1696423082798">
+      <screen x="0" y="0" width="2048" height="1104" />
+    </state>
+    <state width="2005" height="283" key="GridCell.Tab.0.bottom/0.0.2048.1104/-1600.-524.1280.2000@0.0.2048.1104" timestamp="1696423082798" />
+    <state width="2005" height="283" key="GridCell.Tab.0.center" timestamp="1696423082798">
+      <screen x="0" y="0" width="2048" height="1104" />
+    </state>
+    <state width="2005" height="283" key="GridCell.Tab.0.center/0.0.2048.1104/-1600.-524.1280.2000@0.0.2048.1104" timestamp="1696423082798" />
+    <state width="2005" height="283" key="GridCell.Tab.0.left" timestamp="1696423082798">
+      <screen x="0" y="0" width="2048" height="1104" />
+    </state>
+    <state width="2005" height="283" key="GridCell.Tab.0.left/0.0.2048.1104/-1600.-524.1280.2000@0.0.2048.1104" timestamp="1696423082798" />
+    <state width="2005" height="283" key="GridCell.Tab.0.right" timestamp="1696423082798">
+      <screen x="0" y="0" width="2048" height="1104" />
+    </state>
+    <state width="2005" height="283" key="GridCell.Tab.0.right/0.0.2048.1104/-1600.-524.1280.2000@0.0.2048.1104" timestamp="1696423082798" />
+    <state width="2005" height="373" key="GridCell.Tab.1.bottom" timestamp="1696283870171">
+      <screen x="0" y="0" width="2048" height="1104" />
+    </state>
+    <state width="2005" height="373" key="GridCell.Tab.1.bottom/0.0.2048.1104/-1600.-524.1280.2000@0.0.2048.1104" timestamp="1696283870171" />
+    <state width="2005" height="373" key="GridCell.Tab.1.center" timestamp="1696283870171">
+      <screen x="0" y="0" width="2048" height="1104" />
+    </state>
+    <state width="2005" height="373" key="GridCell.Tab.1.center/0.0.2048.1104/-1600.-524.1280.2000@0.0.2048.1104" timestamp="1696283870171" />
+    <state width="2005" height="373" key="GridCell.Tab.1.left" timestamp="1696283870171">
+      <screen x="0" y="0" width="2048" height="1104" />
+    </state>
+    <state width="2005" height="373" key="GridCell.Tab.1.left/0.0.2048.1104/-1600.-524.1280.2000@0.0.2048.1104" timestamp="1696283870171" />
+    <state width="2005" height="373" key="GridCell.Tab.1.right" timestamp="1696283870171">
+      <screen x="0" y="0" width="2048" height="1104" />
+    </state>
+    <state width="2005" height="373" key="GridCell.Tab.1.right/0.0.2048.1104/-1600.-524.1280.2000@0.0.2048.1104" timestamp="1696283870171" />
+    <state x="526" y="195" key="SettingsEditor" timestamp="1695859182165">
+      <screen x="0" y="0" width="2048" height="1104" />
+    </state>
+    <state x="526" y="195" key="SettingsEditor/0.0.2048.1104/-1600.-524.1280.2000@0.0.2048.1104" timestamp="1695859182165" />
+    <state x="655" y="320" width="1294" height="758" key="dock-window-1" timestamp="1694523539976">
+      <screen x="0" y="0" width="2048" height="1104" />
+    </state>
+    <state x="655" y="320" width="1294" height="758" key="dock-window-1/0.0.2048.1104/-1600.-524.1280.2000@0.0.2048.1104" timestamp="1694523539976" />
+    <state x="687" y="241" width="672" height="678" key="search.everywhere.popup" timestamp="1695675328608">
+      <screen x="0" y="0" width="2048" height="1104" />
+    </state>
+    <state x="687" y="241" width="672" height="678" key="search.everywhere.popup/0.0.2048.1104/-1600.-524.1280.2000@0.0.2048.1104" timestamp="1695675328608" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/knn-example.py</url>
+          <line>17</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/full-connect.py</url>
+          <line>25</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/full-connect.py</url>
+          <line>35</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/full-connect.py</url>
+          <line>41</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/SVD.py</url>
+          <line>62</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Lab1$SVD_FC.coverage" NAME="SVD+FC Coverage Results" MODIFIED="1696101953054" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Lab1$SVD_KNN.coverage" NAME="SVD+KNN Coverage Results" MODIFIED="1696124264321" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Lab1$full_connect.coverage" NAME="full-connect Coverage Results" MODIFIED="1694523133678" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Lab1$knn_example.coverage" NAME="knn-example Coverage Results" MODIFIED="1694523181818" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Lab1$compare.coverage" NAME="compare Coverage Results" MODIFIED="1696107032883" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Lab1$Voting.coverage" NAME="Voting Coverage Results" MODIFIED="1696123672591" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Lab1$Inference.coverage" NAME="Inference Coverage Results" MODIFIED="1696106225455" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Lab1$fc.coverage" NAME="fc Coverage Results" MODIFIED="1696423071890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Lab1$Logistic.coverage" NAME="Logistic Coverage Results" MODIFIED="1696123180383" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Lab1$SVD_RF.coverage" NAME="SVD+RF Coverage Results" MODIFIED="1696263802512" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Lab1$SVD2.coverage" NAME="SVD2 Coverage Results" MODIFIED="1695862190509" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Lab1$radomforest.coverage" NAME="radomforest Coverage Results" MODIFIED="1696123228167" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Lab1$SVD_voting.coverage" NAME="SVD+voting Coverage Results" MODIFIED="1696123613837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Lab1$base.coverage" NAME="base Coverage Results" MODIFIED="1695847749293" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/anaconda3/envs/python37/Lib/site-packages/sklearn" />
+    <SUITE FILE_PATH="coverage/Lab1$math.coverage" NAME="math Coverage Results" MODIFIED="1695769412229" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Lab1$SVD_Logistic.coverage" NAME="SVD+Logistic Coverage Results" MODIFIED="1696123794166" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Lab1$KNN.coverage" NAME="KNN Coverage Results" MODIFIED="1696123146805" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Lab1$SVD_Logister.coverage" NAME="SVD+Logister Coverage Results" MODIFIED="1695906025373" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Lab1$cifar100_train.coverage" NAME="cifar100_train Coverage Results" MODIFIED="1694451706661" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Lab1$SVD.coverage" NAME="SVD Coverage Results" MODIFIED="1695865114550" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>

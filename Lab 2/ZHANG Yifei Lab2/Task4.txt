@@ -1,0 +1,198 @@
+model FurutaPendulum "Furuta pendulum"
+    
+    //parameter Real pendulum_start = -Modelica.Constants.pi;
+    parameter Real pendulum_start = 0.05;
+    
+    model ControllerLQR
+      Modelica.Blocks.Interfaces.RealInput phi, dphi , theta1 , dtheta1 , theta2 , dtheta2 ;
+      Modelica.Blocks.Interfaces.RealOutput u(start=0);
+      //Real L[6]={ 316.227766  ,  23.70108135, 276.05731962 , -9.89742254,125.80575278 , -13.51314437 };
+      //Real L[6]={ 999.99999957  ,74.94047244 ,872.9208107  ,-31.30619161 ,397.64456395,-42.73586553 };
+      //Real L[6]={1 ,1.24272358 ,374.73428371 ,26.07636106, -236.45846667,-10.57966294 };
+      Real x[6];
+    equation  
+      //x = {phi+3.14/2, dphi, theta1+3.14, dtheta1, theta2+3.14, dtheta2};
+       x = {phi+3.14/2, dphi, theta1, dtheta1, theta2, dtheta2};
+     //u = -(100 * x[1] + 9.65721819 * x[2] + 103.07438354 * x[3] - 1.40000991 * x[4] + 87.40106372 * x[5] - 3.88918398 * x[6]);    
+        //u = -(L[1] * x[1] + L[2] * x[2] + L[3] * x[3] + L[4] * x[4] + L[5] * x[5] + L[6] * x[6]);
+      u = -(1 * x[1] + 1.24272358 * x[2] + 374.73428371 * x[3] + 26.07636106 * x[4] -236.45846667 * x[5] -10.57966294 * x[6]);
+    end ControllerLQR;
+    
+    inner Modelica.Mechanics.MultiBody.World world(
+      axisLength(displayUnit="mm"),
+      axisDiameter(displayUnit="mm"),
+      nominalLength(displayUnit="mm") = 0.1)
+                                annotation (Placement(transformation(extent={{-60,-60},
+              {-40,-40}},   rotation=0)));
+    
+    Modelica.Mechanics.MultiBody.Joints.Revolute rotor(
+      a(fixed=false),
+      w(fixed=true),
+      cylinderLength(displayUnit="mm") = 0.015,
+      cylinderColor={0,0,0},
+      cylinderDiameter(displayUnit="mm") = 0.0605,
+      useAxisFlange=true,
+      n={0,1,0},
+      phi(fixed=true, start=-1.5707963267949)) annotation (Placement(
+          transformation(
+          origin={0,32},
+          extent={{-10,-10},{10,10}},
+          rotation=90)));
+    Modelica.Mechanics.MultiBody.Joints.Revolute pendulumAxis(
+      a(fixed=false),
+      w(fixed=true),
+      cylinderLength(displayUnit="mm") = 0.005,
+      cylinderDiameter(displayUnit="mm") = 0.005,
+      cylinderColor={200,200,200},
+      useAxisFlange=true,
+      n={-1,0,0},
+      phi(
+        
+        start=pendulum_start,
+        displayUnit="rad",fixed = true)) annotation (Placement(transformation(extent={{43.55555555555556,74.44444444444446},{63.55555555555556,94.44444444444446}}, rotation=0.0,origin = {0.0,0.0})));
+    Modelica.Mechanics.MultiBody.Parts.BodyCylinder base(
+      r(displayUnit="mm") = {0,0.1,0},
+      r_shape(displayUnit="mm") = {0,0,0},
+      diameter(displayUnit="mm") = 0.06,
+      color={155,155,155},
+      r_0(displayUnit="mm", fixed=true)) annotation (Placement(transformation(
+          extent={{-10,-10},{10,10}},
+          rotation=90,
+          origin={0,-26})));
+    Modelica.Mechanics.MultiBody.Parts.Fixed fixed(
+      length=0,
+      width=0,
+      height=0,
+      r(displayUnit="mm") = {0,-0.025,-0.1})
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}},
+          rotation=90,
+          origin={0,-52})));
+    Modelica.Mechanics.Rotational.Components.Damper pendulumDamper(d=5e-6)
+      annotation (Placement(transformation(
+          extent={{-10.0,-10.0},{10.0,10.0}},
+          rotation=180.0,
+          origin={53.55555555555556,104.44444444444446})));
+    Modelica.Mechanics.Rotational.Components.Damper rotorDamper(d=0.03) annotation (
+        Placement(transformation(
+          extent={{-10,-10},{10,10}},
+          rotation=180,
+          origin={-24,42})));
+    Modelica.Mechanics.MultiBody.Parts.BodyCylinder pendulumAttachment(
+      r_shape(displayUnit="mm") = {0,0,0},
+      diameter(displayUnit="mm") = 0.005,
+      color={0,0,200},
+      r(displayUnit="mm") = {0.043,0,0},
+      density=3700) annotation (Placement(transformation(
+          extent={{9.555555555555557,74.44444444444446},{29.555555555555557,94.44444444444446}},
+          rotation=0.0,
+          origin={0.0,0.0})));
+
+    Modelica.Mechanics.Rotational.Sensors.AngleSensor pendulumA
+      annotation (Placement(transformation(extent={{87.0,85.0},{101.0,99.0}},rotation = 0.0,origin = {0.0,0.0})));
+    Modelica.Mechanics.Rotational.Sensors.SpeedSensor pendulumW
+      annotation (Placement(transformation(extent={{87.0,99.0},{101.0,113.0}},rotation = 0.0,origin = {0.0,0.0})));
+    Modelica.Mechanics.Rotational.Sensors.AngleSensor rotorA
+      annotation (Placement(transformation(extent={{-20,-12},{-6,2}})));
+    Modelica.Mechanics.Rotational.Sensors.SpeedSensor rotorW
+      annotation (Placement(transformation(extent={{-20,2},{-6,16}})));
+    Modelica.Blocks.Sources.Pulse pulse[3](
+      startTime={1,1,1},
+      width={1,1,1},
+      period={10,10,10},
+      amplitude={0.001,0,0},offset = {0,0,0})   annotation (Placement(transformation(
+          extent={{26.0,-38.0},{38.0,-26.0}},
+          rotation=0.0,
+          origin={0.0,0.0})));
+    Modelica.Mechanics.MultiBody.Parts.BodyCylinder pendulumArm(r_shape(displayUnit = "mm") = {0,0,0},diameter(displayUnit = "mm") = 0.005,color = {0,128,255},r(displayUnit = "mm") = {0,0.075,0},density = 3700) annotation(Placement(transformation(extent = {{-10.0,-10.0},{10.0,10.0}},rotation = -90.0,origin = {72.0,20.0})));
+    .Modelica.Mechanics.Rotational.Sensors.AngleSensor pendulumA2 annotation(Placement(transformation(extent = {{126.87207054521761,56.87207054521761},{141.1279294547824,71.12792945478239}},origin = {0.0,0.0},rotation = 0.0)));
+    .Modelica.Mechanics.Rotational.Sensors.SpeedSensor pendulumW2 annotation(Placement(transformation(extent = {{126.88089096561893,76.88089096561893},{141.11910903438107,91.11910903438107}},origin = {0.0,0.0},rotation = 0.0)));
+    .Modelica.Mechanics.MultiBody.Parts.BodyCylinder pendulumArm2(r = {0,0.03,0},diameter = 0.005,density = 3700,color = {255,65,65}) annotation(Placement(transformation(extent = {{-10.0,-10.0},{10.0,10.0}},origin = {126.0,20.0},rotation = -90.0)));
+    .Modelica.Mechanics.MultiBody.Parts.BodyCylinder pendulumAttachment2(r_shape = {0,0,0},r = {-0.043,0,0},diameter = 0.005,density = 3700,sequence_start = {1,2,3},color = {155,0,0}) annotation(Placement(transformation(extent = {{10.0,46.0},{30.0,66.0}},origin = {0.0,0.0},rotation = 0.0)));
+    .Modelica.Mechanics.MultiBody.Joints.Revolute pendulumAxis2(useAxisFlange = true,cylinderLength = 0.005,cylinderDiameter = 0.005,phi(start = pendulum_start,fixed = true),n = {1,0,0}) annotation(Placement(transformation(extent = {{87.08888888888889,44.9111111111111},{107.08888888888889,64.9111111111111}},origin = {0.0,0.0},rotation = 0.0)));
+    .Modelica.Mechanics.Rotational.Components.Damper pendulumDamper2(d = 2.5e-6) annotation(Placement(transformation(extent = {{100.0,66.0},{80.0,86.0}},origin = {0.0,0.0},rotation = 0.0)));
+    .Modelica.Mechanics.MultiBody.Forces.WorldForce disturbance2 annotation(Placement(transformation(extent = {{49.6360575536786,-52.36394244632141},{66.3639424463214,-35.63605755367859}},origin = {0.0,0.0},rotation = 0.0)));
+    Modelica.Mechanics.MultiBody.Forces.WorldForce disturbance annotation(Placement(transformation(extent = {{50,-40},{66,-24}})));
+    .Modelica.Mechanics.Rotational.Sources.Torque torque(tau(fixed = false)) annotation(Placement(transformation(extent = {{-76.0,22.0},{-56.0,42.0}},origin = {0.0,0.0},rotation = 0.0)));   
+    ControllerLQR DampingController() annotation();
+    equation
+    connect(base.frame_b, rotor.frame_a) annotation (Line(
+        points={{0,-16},{0,0},{-6.66134e-16,0},{-6.66134e-16,22}},
+        color={95,95,95},
+        thickness=0.5,
+        smooth=Smooth.None));
+    connect(base.frame_a, fixed.frame_b) annotation (Line(
+        points={{0,-36},{0,-42},{4.44089e-16,-42}},
+        color={95,95,95},
+        thickness=0.5,
+        smooth=Smooth.None));
+    connect(pendulumDamper.flange_b, pendulumAxis.support) annotation (Line(
+        points={{43.55555555555556,104.44444444444446},{35.55555555555556,104.44444444444446},{35.55555555555556,94.44444444444446},{47.55555555555556,94.44444444444446}},
+        color={0,0,0},
+        smooth=Smooth.None));
+    connect(pendulumDamper.flange_a, pendulumAxis.axis) annotation (Line(
+        points={{63.55555555555556,104.44444444444446},{71.55555555555556,104.44444444444446},{71.55555555555556,94.44444444444446},{53.55555555555556,94.44444444444446}},
+        color={0,0,0},
+        smooth=Smooth.None));
+    connect(rotorDamper.flange_a, rotor.axis) annotation (Line(
+        points={{-14,42},{-10,42},{-10,32}},
+        color={0,0,0},
+        smooth=Smooth.None));
+    connect(rotorDamper.flange_b, rotor.support) annotation (Line(
+        points={{-34,42},{-40,42},{-40,26},{-10,26}},
+        color={0,0,0},
+        smooth=Smooth.None));
+    connect(pendulumAttachment.frame_b, pendulumAxis.frame_a) annotation (Line(
+        points={{29.555555555555557,84.44444444444446},{43.55555555555556,84.44444444444446}},
+        color={95,95,95},
+        thickness=0.5,
+        smooth=Smooth.None));
+    connect(pendulumAttachment.frame_a, rotor.frame_b) annotation (Line(
+        points={{9.555555555555557,84.44444444444446},{4.44089e-16,84.44444444444446},{4.44089e-16,42}},
+        color={95,95,95},
+        thickness=0.5,
+        smooth=Smooth.None));
+    connect(pendulumW.flange, pendulumAxis.axis) annotation (Line(
+        points={{87,106},{78,106},{78,94.44444444444446},{53.55555555555556,94.44444444444446}},
+        color={0,0,0},
+        smooth=Smooth.None));
+    connect(pendulumA.flange, pendulumAxis.axis) annotation (Line(
+        points={{87,92},{78,92},{78,94.44444444444446},{53.55555555555556,94.44444444444446}},
+        color={0,0,0},
+        smooth=Smooth.None));
+    connect(rotorW.flange, rotor.axis) annotation (Line(
+        points={{-20,9},{-24,9},{-24,32},{-10,32}},
+        color={0,0,0},
+        smooth=Smooth.None));
+    connect(rotorA.flange, rotor.axis) annotation (Line(
+        points={{-20,-5},{-24,-5},{-24,32},{-10,32}},
+        color={0,0,0},
+        smooth=Smooth.None));
+    connect(pendulumAxis.frame_b,pendulumArm.frame_a) annotation(Line(points = {{63.55555555555556,84.44444444444446},{72,84.44444444444446},{72,30}},color = {95,95,95}));
+    connect(pulse.y,disturbance.force) annotation(Line(points = {{38.6,-32},{48.4,-32}},color = {0,0,127}));
+    connect(disturbance.frame_b,pendulumArm.frame_b) annotation(Line(points = {{66,-32},{72,-32},{72,10}},color = {95,95,95}));
+    connect(rotor.axis,torque.flange) annotation(Line(points = {{-10,32},{-56,32}},color = {0,0,0}));
+    connect(DampingController.phi, rotorA.phi) annotation();
+    connect(DampingController.dphi, rotorW.w) annotation();
+    connect(DampingController.theta1, pendulumA.phi) annotation();
+    connect(DampingController.dtheta1, pendulumW.w) annotation();
+    connect(DampingController.u, torque.tau) annotation();
+    connect(DampingController.dtheta2,pendulumW2.w);
+    connect(DampingController.theta2,pendulumA2.phi);
+    connect(pendulumAxis2.frame_b,pendulumArm2.frame_a) annotation(Line(points = {{107.08888888888889,54.9111111111111},{126,54.9111111111111},{126,30}},color = {95,95,95}));
+    connect(pendulumAttachment2.frame_a,rotor.frame_b) annotation(Line(points = {{10,56},{2.220446049250313e-15,56},{2.220446049250313e-15,42}},color = {95,95,95}));
+    connect(pendulumAttachment2.frame_b,pendulumAxis2.frame_a) annotation(Line(points = {{30,56},{87.08888888888889,56},{87.08888888888889,54.9111111111111}},color = {95,95,95}));
+    connect(pulse.y,disturbance2.force) annotation(Line(points = {{38.6,-32},{42,-32},{42,-44},{47.96326906441432,-44}},color = {0,0,127}));
+    connect(pendulumArm2.frame_b,disturbance2.frame_b) annotation(Line(points = {{126,10},{126,-44},{66.3639424463214,-44}},color = {95,95,95}));
+    connect(pendulumDamper2.flange_b,pendulumAxis2.support) annotation(Line(points = {{80,76},{76,76},{76,64.9111111111111},{91.08888888888889,64.9111111111111}},color = {0,0,0}));
+    connect(pendulumDamper2.flange_a,pendulumAxis2.axis) annotation(Line(points = {{100,76},{100,64.9111111111111},{97.08888888888889,64.9111111111111}},color = {0,0,0}));
+    connect(pendulumDamper2.flange_a,pendulumW2.flange) annotation(Line(points = {{100,76},{112,76},{112,84},{126.88089096561895,84}},color = {0,0,0}));
+    connect(pendulumDamper2.flange_a,pendulumA2.flange) annotation(Line(points = {{100,76},{112,76},{112,64},{126.87207054521762,64}},color = {0,0,0}));
+
+    annotation (
+      versionDate="2014-02-04",
+      Commands(file="Furuta.mos" "Simulate Furuta pendulum", file="Animate.mos"
+          "Animate Furuta pendulum"),
+      experiment(NumberOfIntervals=5000, StopTime=10),
+      Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,
+              100}}),     graphics),uses(Modelica(version = "4.0.0")));
+end FurutaPendulum;
